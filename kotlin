@@ -1,0 +1,50 @@
+
+
+List
+
+* immutable 
+listOf("Fowler", "Beck", "Evans")
+val readOnlyList = listOf<String>("John", "Doe")
+val filteredList = listOfNotNull("A", "B", null) // create list filtering null
+val myList = List(10){ it.toString() }
+
+
+* mutable
+mutableListOf<String>()
+arrayListOf<Int>()
+var temp: ArrayList<String> = ArrayList()
+val myMutableList = MutableList(10){ it.toString() }
+
+
+* buildList()
+val students = listOf<String>("Hertz","Jane")
+val myList = buildList<String>(students.size + 1) {
+    add("Jitendra")
+    addAll(students)
+}
+
+
+Map to List
+
+val userAddressMap = mapOf(
+        "A" to "India",
+        "B" to "Australia",
+        "C" to null
+    )
+val newList : List<Pair<String,String?>> = userAddressMap.toList()
+
+
+
+
+
+break 
+
+  test@for (i in 'z' downTo 'a') {
+      for ( j in 1..10) {
+          if (i == 'c' && j == 4) {
+              break@test;
+          }
+          println (" $i $j ")
+
+      }
+  }
