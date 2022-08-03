@@ -23,6 +23,10 @@ val myList = buildList<String>(students.size + 1) {
     addAll(students)
 }
 
+Map 
+mapOf
+mutableMapOf
+
 
 Map to List
 
