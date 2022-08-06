@@ -52,3 +52,149 @@ break
 
       }
   }
+  
+  
+  
+  
+  
+class 
+
+- 기본적으로 final
+- 확장 가능 open
+
+
+
+
+
+
+docker 
+* network 확인 
+docker network ls 
+
+~/git/spring-batch$ docker network list
+NETWORK ID     NAME          DRIVER    SCOPE
+59b9011943e4   bridge        bridge    local
+12aca8dceda1   dfm_default   bridge    local
+94709182e815   host          host      local
+c45121ef8be5   none          null      local
+
+
+
+
+~/git/spring-batch$ docker network inspect dfm_default
+[
+    {
+        "Name": "dfm_default",
+        "Id": "12aca8dceda185e23e65af03db4f09d0eac4edd4605369aac2a2062ebfc90786",
+        "Created": "2022-07-07T06:54:44.610255458Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "361b4bb7d4ddb3a2844a52b6a4c491bf62fb88c1507f5e675fc1bb0475cb4ae3": {
+                "Name": "dfm-mysql-1",
+                "EndpointID": "60daddd39df57c6db199e8f712739aabb3486a5141153fb64af99ca8a6f039be",
+                "MacAddress": "02:42:ac:12:00:02",
+                "IPv4Address": "172.18.0.2/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.network": "default",
+            "com.docker.compose.project": "dfm",
+            "com.docker.compose.version": "2.6.1"
+        }
+    }
+]
+~/git/spring-batch$ docker network connect dfm_default charming_lalande
+~/git/spring-batch$ docker network inspect dfm_default
+[
+    {
+        "Name": "dfm_default",
+        "Id": "12aca8dceda185e23e65af03db4f09d0eac4edd4605369aac2a2062ebfc90786",
+        "Created": "2022-07-07T06:54:44.610255458Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "361b4bb7d4ddb3a2844a52b6a4c491bf62fb88c1507f5e675fc1bb0475cb4ae3": {
+                "Name": "dfm-mysql-1",
+                "EndpointID": "60daddd39df57c6db199e8f712739aabb3486a5141153fb64af99ca8a6f039be",
+                "MacAddress": "02:42:ac:12:00:02",
+                "IPv4Address": "172.18.0.2/16",
+                "IPv6Address": ""
+            },
+            "b69c01dd3adf033e57d790d3283a8d980b1ae8f85c3f0c25fac86351d78e6cb0": {
+                "Name": "charming_lalande",
+                "EndpointID": "7237fe4bdded52e258f483eed5dd8a0a66a9f18fda9cd569099bf2f6c42e7912",
+                "MacAddress": "02:42:ac:12:00:03",
+                "IPv4Address": "172.18.0.3/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.network": "default",
+            "com.docker.compose.project": "dfm",
+            "com.docker.compose.version": "2.6.1"
+        }
+    }
+]
+
+
+
+
+
+.bash_profile 
+export PATH=/Users/t1100382/test/homebrew/bin/:$PATH
+export JAVA_HOME=$(/usr/libexec/java_home -v 17.0.3)
+
+PS1='\w\$ '
+
+
+
+
+
+
+@ConditionalOnProperty
+contextRunner 
+
+https://recordsoflife.tistory.com/605
+
+
+
