@@ -198,3 +198,41 @@ https://recordsoflife.tistory.com/605
 
 
 
+
+
+
+
+
+> Loop 시 index 도출
+
+for ((index, repo) in repos.withIndex()) { 
+
+val numberOfProcessed = AtomicInteger()
+numberOfProcessed.incrementAndGet()
+
+val countDownLatch = CountDownLatch(repos.size)
+countDownLatch.countDown()
+
+countDownLatch.await()
+
+
+
+
+> 실행 시간 측정
+1. 
+val elapsed: Long = measureTimeMillis {
+    Thread.sleep(100)
+}
+println(elapsed)
+
+2. 
+var mark = TimeSource.Monotonic.markNow()
+println(mark.elapsedNow())
+
+3. 
+
+
+
+
+
+
