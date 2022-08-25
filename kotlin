@@ -235,4 +235,11 @@ println(mark.elapsedNow())
 
 
 
+단일표현식 함수 single-expression function  ( 타입 추론 가능으로 반환형 생략 가능 )
+fun add(a: Int, b: Int) = a+b
+
+
+println ("1" is Int)
+println ("1" !is String)
+
 
