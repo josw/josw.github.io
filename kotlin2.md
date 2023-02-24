@@ -11,3 +11,9 @@ class Person(name:String, age: Int) {
 }
 
 
+
+
+
+val cate = doc.select("table.item_position a").joinToString(">") {
+    it.text()
+}
