@@ -19,6 +19,12 @@ spring.jpa.defer-datasource-initialization: true
 
 
 
-Going Reactive with Spring, Coroutines and Kotlin Flow
+* 
+
+* Going Reactive with Spring, Coroutines and Kotlin Flow
 https://spring.io/blog/2019/04/12/going-reactive-with-spring-coroutines-and-kotlin-flow
+
+
+* spring-boot-kotlin-coroutines https://www.baeldung.com/kotlin/spring-boot-kotlin-coroutines
+
 
